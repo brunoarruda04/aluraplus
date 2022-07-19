@@ -12,7 +12,7 @@ body {
     color: var(--branco-principal);
     font-family: var(--fonte-principal);
     font-size: 16px;
-    font-weight: 400    ;
+    font-weight: 400;
 }
 
 * {
@@ -79,6 +79,11 @@ body {
 
 .secundario__imagem {
     width: 70%;
+}
+
+.secundario__imagem--mobile {
+    position: fixed;
+    visibility: hidden;
 }
 
 .container__descricao {
@@ -156,4 +161,120 @@ body {
     color: var(--cinza-secundario);
     font-size: 14px;
     margin: 1em 0;
+}
+
+@media screen and (max-width: 480px) {
+    .principal {
+        align-items: center;
+        background-image: none;
+    }
+    
+    .container {
+        display: block;
+        text-align: center;
+        height: 90vh;
+        max-width: 100%;
+    }
+
+    .container__caixa {
+        margin: 5em 4em;
+        text-align: center;
+    }
+
+    .container__titulo {
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    .container__imagem {
+        text-align: center;
+        width: 100%;
+    }
+
+    .secundario {
+        align-items: center;
+        margin: 10px 20px;
+    }
+
+    .secundario__imagem {
+        width: 60%;
+    }
+
+    .secundario__imagem--mobile {
+        position: static;
+        visibility: visible;
+    }
+
+    .secundario__imagem--desktop {
+        display: none;
+    }
+
+    .container__descricao {
+        padding: 3em;
+    }
+    
+    .descricao__titulo {
+        color: var(--branco-principal);
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 0.1em;
+    }
+
+    .dispositivos {
+        width: 100vw;
+        text-align: center;
+    }
+    
+    .dispositivos__lista {
+        display: block;
+        justify-content: center;
+        list-style-type: none;
+        margin: 5em 0;
+    }
+    
+    .dispositivos__titulo {
+        color: var(--branco-principal);
+        font-size: 22px;
+        margin: 0 2em;
+    }
+
+    .dispositivo__icone {
+        max-width: 50%;
+    }
+    
+    .lista__item {
+        font-size: 16px;
+        color: var(--branco-principal);
+    }
+    
+    .rodape {
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .rodape__logo{
+        max-width: 50%;
+    }
+    
+    .rodape__lista {
+        display: block;
+        justify-content: center;
+        list-style-type: none;
+        margin-top: 1em;
+    }
+    
+    .lista__link a {
+        color: var(--branco-principal);
+        font-size: 14px;
+        margin-left: 0;
+        margin-top: 1.5em;
+        text-decoration: none;
+        transition: 0.3s all;
+    }
+    .rodape__texto {
+        color: var(--cinza-secundario);
+        font-size: 10px;
+        margin: 1em 5em;
+    }
 }
